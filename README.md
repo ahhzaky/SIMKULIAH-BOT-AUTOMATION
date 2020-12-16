@@ -2,7 +2,7 @@
 
 1. Absen sim kuliah secara otomatis
 
-### Create file in secrets.json file and Change driver chrome
+### Create file in secrets.json
 
 File `secrets.json`
 
