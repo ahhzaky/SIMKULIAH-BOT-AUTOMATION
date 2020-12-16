@@ -25,3 +25,9 @@ File `secrets.json`
 
 - [ ] Deploy on server
 - [ ] set time for absent class
+
+### Run Script
+
+```buildoutcfg
+python3 bot_sim.py
+```
