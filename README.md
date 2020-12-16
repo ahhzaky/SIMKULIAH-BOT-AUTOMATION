@@ -8,8 +8,8 @@ File `secrets.json`
 
 ```json
 {
-  "username": "yourUsernameInCheckIo",
-  "password": "yourpasswordinCheckIo"
+  "username": "yourUsernameInSIMKULIAH",
+  "password": "yourpasswordinSIMKULIAH"
 }
 ```
 
