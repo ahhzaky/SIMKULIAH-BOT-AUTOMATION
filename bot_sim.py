@@ -1,5 +1,6 @@
 import json
 from dataclasses import dataclass
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -22,7 +23,8 @@ class SIMkuliah:
         self.login = login
         self.password = password
         self.base_url = "https://simkuliah.unsyiah.ac.id"
-        self.driver = webdriver.Chrome("E:\chromedriver.exe")
+        # self.driver = webdriver.Chrome("E:\chromedriver.exe")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.COMMAND_OR_CONTROL = Keys.COMMAND if sys.platform == 'darwin' else Keys.CONTROL
 
     def single_interation_over_session(self):
@@ -33,7 +35,7 @@ class SIMkuliah:
     def login_to_simkuliah(self):
         self.driver.get(self.base_url)
         self.put_credentials_to_form()
-        get_to_absen_simkuliah()
+        self.get_to_absen_simkuliah()
 
     def put_credentials_to_form(self):
         try:
@@ -54,6 +56,7 @@ class SIMkuliah:
             time.sleep(2)
         except NoSuchElementException:
             print("Absen Belum ada")
+        pass
 
 
 if __name__ == '__main__':
