@@ -1,12 +1,12 @@
-import json
-from dataclasses import dataclass
-from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 import sys
 import time
+import json
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from dataclasses import dataclass
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 
 # baca file json
 
@@ -23,7 +23,7 @@ class SIMkuliah:
         self.login = login
         self.password = password
         self.base_url = "https://simkuliah.unsyiah.ac.id"
-        # self.driver = webdriver.Chrome("E:\chromedriver.exe")
+        # self.driver = webdriver.Chrome("E:\chromedriver.exe") # for cache
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.COMMAND_OR_CONTROL = Keys.COMMAND if sys.platform == 'darwin' else Keys.CONTROL
 
