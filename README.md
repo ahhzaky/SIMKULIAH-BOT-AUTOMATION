@@ -17,13 +17,14 @@ File `secrets.json`
 
 - [x] Buka halaman SimKuliah
 - [x] Login dengan username(NIM) dan password
+- [x] Konfirmasi kehadiran
 - [ ] Cek apakah ada absen atau tidak
-- [ ] Konfirmasi kehadiran
+- [ ] Refresh web jika error
 - [ ] Exit app chrome driver
 
 ### future achievements
 
-- [ ] Deploy on server
+- [ ] Deploy on server()
 - [ ] set time for absent class
 
 ### Run Script
