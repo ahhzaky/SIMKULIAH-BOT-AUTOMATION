@@ -55,11 +55,13 @@ class SIMkuliah:
     # click absen
     def get_to_absen_simkuliah(self):
         try:
-            self.driver.find_element_by_link_text(
-                'Konfirmasi Kehadiran').click()
+            element = self.driver.find_element_by_xpath(
+                "//*[@id='konfirmasi-kehadiran']")
+            element.click()
             time.sleep(1)
-            self.driver.find_element_by_link_text(
-                'Konfirmasi').click()
+            konfirm = self.driver.find_element_by_xpath(
+                "//*[@class='confirm']")
+            konfirm.click()
             time.sleep(2)
             print("Anda sudah Absen")
         except NoSuchElementException:
